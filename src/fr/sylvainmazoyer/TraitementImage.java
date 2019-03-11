@@ -12,8 +12,14 @@ public class TraitementImage {
     static int largeurImage;
     static int hauteurImage;
     static int roiSize = 64;
+    String imageName = new String();
 
-    public int[][] openImage(String imageName) {
+    public TraitementImage(String imageName) {
+        this.imageName = imageName;
+    }
+
+
+    public int[][] openImage() {
 
         String pathBmpFile = new String();
         pathBmpFile = System.getProperty("user.dir") +"\\" + imageName;
