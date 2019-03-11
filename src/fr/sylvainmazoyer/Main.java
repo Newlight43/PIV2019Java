@@ -8,7 +8,7 @@ public class Main {
         TraitementImage imgTraitement = new TraitementImage("YoupiOufDegrade.bmp");
         imgTraitement.openImage();
         System.out.println(imgTraitement.largeurImage+ " x " + imgTraitement.hauteurImage);
-     //   CutRoi.calculRoiSize(OpenBmp.largeurImage,  OpenBmp.hauteurImage);
+        imgTraitement.calculRoiSize(imgTraitement.largeurImage,  imgTraitement.hauteurImage);
 
     }
 }
