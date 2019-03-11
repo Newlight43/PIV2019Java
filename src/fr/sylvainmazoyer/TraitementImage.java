@@ -66,7 +66,33 @@ public class TraitementImage {
 
         System.out.println("L'image comporte "+ nbRoi[0] +" par "+ nbRoi[1] +" ROIs de taille 64 px");
         return nbRoi;
-
     }
+
+    public int[][][][] createRoi(){
+
+        int[][] image;
+        int[] nbRoi = new int[2];
+        int[][][][] roiIJXY;
+
+        image=this.openImage();
+        nbRoi=calculRoiSize(largeurImage, hauteurImage);
+        roiIJXY = new int[nbRoi[0]][nbRoi[1]][roiSize][roiSize];
+
+        for (int i =0 ; i<nbRoi[0] ; i++){
+            for (int j =0 ; j<nbRoi[1] ; j++){
+                for (int x =0 ; x<64 ; x++){
+                    for (int y =0 ; y<64 ; y++){
+
+                        roiIJXY[i][j][x][y] = image[j*64 + x][i*64 + y];
+
+                    }
+                }
+            }
+
+        }
+
+        return roiIJXY;
+    }
+
 
 }
