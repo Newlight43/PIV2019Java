@@ -11,7 +11,7 @@ public class TraitementImage {
 
     static int largeurImage;
     static int hauteurImage;
-    static int roiSize = 64;
+    static int roiSize = Main.roiSize;
     String imageName = new String();
 
     public TraitementImage(String imageName) {

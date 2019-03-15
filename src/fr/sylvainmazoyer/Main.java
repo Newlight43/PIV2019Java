@@ -2,6 +2,9 @@ package fr.sylvainmazoyer;
 
 public class Main {
 
+    static int roiSize = 64;
+    static int lagRatio = 1;
+
     public static void main(String[] args) {
         String imageName = new String();
         imageName = "YoupiOufDegrade.bmp";
